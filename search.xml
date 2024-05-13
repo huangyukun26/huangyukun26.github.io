@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>Hello ZWL</title>
+      <link href="/2024/05/13/Hello-ZWL/"/>
+      <url>/2024/05/13/Hello-ZWL/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Hello-ZWL"><a href="#Hello-ZWL" class="headerlink" title="Hello ZWL!"></a>Hello ZWL!</h1><p>太无聊了，我给你画个爱心看看捏</p><h2 id="粘贴这个代码-↓"><a href="#粘贴这个代码-↓" class="headerlink" title="粘贴这个代码 ↓"></a>粘贴这个代码 ↓</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">t = np.linspace(<span class="number">0</span>, <span class="number">2</span>*np.pi, <span class="number">100</span>)</span><br><span class="line">x = <span class="number">16</span> * np.sin(t)**<span class="number">3</span></span><br><span class="line">y = <span class="number">13</span> * np.cos(t) - <span class="number">5</span> * np.cos(<span class="number">2</span>*t) - <span class="number">2</span> * np.cos(<span class="number">3</span>*t) - np.cos(<span class="number">4</span>*t)</span><br><span class="line"></span><br><span class="line">plt.plot(x, y, <span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">plt.axis(<span class="string">&#x27;equal&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;ZWL 520&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure><h2 id="到这里运行试试捏"><a href="#到这里运行试试捏" class="headerlink" title="到这里运行试试捏"></a>到这里运行试试捏</h2><p><a href="https://python-fiddle.com/examples/matplotlib">点击这里粘贴代码看看爱心，忘了这个网站要不要挂梯子，你还是发消息给我直接看吧！</a></p><h2 id="Ending"><a href="#Ending" class="headerlink" title="Ending"></a>Ending</h2><p>zwl love love</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Markdown </tag>
+            
+            <tag> Life </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2024/05/12/hello-world/"/>
       <url>/2024/05/12/hello-world/</url>
