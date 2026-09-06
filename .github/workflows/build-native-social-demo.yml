@@ -1,0 +1,61 @@
+name: Build native social-network demo into homepage
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/build-native-social-demo.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout homepage
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Checkout native social-network demo source
+        uses: actions/checkout@v4
+        with:
+          repository: huangyukun26/SocialNetworkPlatformApplicationSystem
+          ref: portfolio-native-demo
+          path: _social_src
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: _social_src/Source/social-network/client/package-lock.json
+
+      - name: Install dependencies
+        working-directory: _social_src/Source/social-network/client
+        run: npm ci
+
+      - name: Build original React frontend with demo data layer
+        working-directory: _social_src/Source/social-network/client
+        run: npm run build
+
+      - name: Copy build into homepage
+        run: |
+          rm -rf social-network-demo
+          mkdir -p social-network-demo
+          cp -R _social_src/Source/social-network/client/dist/. social-network-demo/
+          rm -rf _social_src
+
+      - name: Commit built demo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add social-network-demo
+          if git diff --cached --quiet; then
+            echo "Demo build is already current."
+            exit 0
+          fi
+          git commit -m "Build native social network portfolio demo"
+          git push origin HEAD:main
