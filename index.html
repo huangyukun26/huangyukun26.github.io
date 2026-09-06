@@ -1,135 +1,90 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Yukun Huang (Charli) — PhD student at HKUST(GZ), working on 3D reconstruction, streaming reconstruction, neural rendering, computer graphics, and 3D vision." />
-  <title>Yukun Huang | Academic Homepage</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Yukun Huang (Charli), PhD student at HKUST(GZ), working on 3D reconstruction, rendering, streaming reconstruction, computer graphics and 3D vision.">
+  <title>Yukun Huang (Charli) - Homepage</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-  <header class="topbar">
-    <div class="wrap nav-wrap">
-      <a class="brand" href="#top">Yukun Huang</a>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#news">News</a>
-        <a href="#research">Research</a>
-        <a href="#projects">Projects</a>
-        <a href="#notes">Notes</a>
-        <a href="#awards">Awards</a>
-        <a href="#education">Education</a>
-      </nav>
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="home-link" href="index.html">Homepage</a>
+    <nav class="main-nav">
+      <a class="active" href="index.html">About Me</a>
+      <a href="index.html#news">News</a>
+      <a href="projects.html">Projects</a>
+      <a href="notes.html">Notes</a>
+      <a href="awards.html">Awards</a>
+    </nav>
+  </div>
+</header>
+
+<div class="site-shell">
+  <aside class="sidebar">
+    <div class="avatar placeholder-bird" aria-label="Yukun Huang avatar">
+      <div class="bird-body"></div><div class="bird-head"></div><div class="bird-eye e1"></div><div class="bird-eye e2"></div><div class="bird-hand"></div>
     </div>
-  </header>
+    <h2>Yukun Huang</h2>
+    <p class="sidebar-bio">PhD Student at HKUST(GZ)</p>
+    <ul class="profile-list">
+      <li><i class="fa-solid fa-location-dot"></i> Guangzhou, China</li>
+      <li><i class="fa-solid fa-graduation-cap"></i> HKUST(GZ)</li>
+      <li><i class="fa-solid fa-user-tie"></i> PhD advisor: Maosu Li</li>
+      <li><i class="fa-solid fa-building-columns"></i> B.Eng., Beijing Forestry University</li>
+      <li><i class="fa-solid fa-user-graduate"></i> Undergraduate advisor: Shaorong Wang</li>
+      <li><a href="mailto:charliH26@hotmail.com"><i class="fa-solid fa-envelope"></i> Email</a></li>
+      <li><a href="https://github.com/huangyukun26" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> GitHub</a></li>
+    </ul>
+  </aside>
 
-  <main id="top" class="wrap">
-    <section class="hero" id="about">
-      <div class="avatar-card" aria-label="Charli avatar">
-        <svg viewBox="0 0 360 360" role="img" aria-label="stylized black bird avatar">
-          <defs>
-            <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#eef6f8"/><stop offset="1" stop-color="#d7e6df"/>
-            </linearGradient>
-            <linearGradient id="beak" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#ffd23f"/><stop offset="1" stop-color="#f1b800"/>
-            </linearGradient>
-          </defs>
-          <circle cx="180" cy="180" r="174" fill="url(#bg)"/>
-          <ellipse cx="172" cy="207" rx="110" ry="120" fill="#17191d"/>
-          <ellipse cx="225" cy="138" rx="76" ry="78" fill="#0d1014"/>
-          <ellipse cx="205" cy="110" rx="15" ry="18" fill="#fff8cf"/>
-          <ellipse cx="255" cy="125" rx="14" ry="19" fill="#fff8cf"/>
-          <path d="M214 150 L272 170 L218 184 Z" fill="#fff7c4"/>
-          <path d="M168 150 C142 124 130 132 132 163 C135 203 154 222 184 214 C211 207 234 189 249 174 C260 163 252 155 239 157 C214 161 196 166 181 169 C182 162 177 156 168 150Z" fill="url(#beak)" stroke="#b78400" stroke-width="6"/>
-          <path d="M118 302 l-30 24 M118 302 l15 28 M221 305 l-17 30 M221 305 l31 18" stroke="#17191d" stroke-width="13" stroke-linecap="round"/>
-        </svg>
+  <main class="page-content">
+    <span class="anchor" id="about-me"></span>
+    <p class="intro">My name is <span class="accent-text">Yukun Huang</span> (you can call me Charli). I am currently a PhD student at <strong>The Hong Kong University of Science and Technology (Guangzhou)</strong>. Before starting my PhD, I received a B.Eng. in Computer Science and Technology from <strong>Beijing Forestry University</strong>.</p>
+
+    <div class="quote-accent">
+      My research centers on <span class="accent-text">Computer Graphics & 3D Vision</span>:
+      <ul>
+        <li>Building robust methods for <span class="primary-gradient-text">3D reconstruction</span> and <span class="primary-gradient-text">streaming / online reconstruction</span>.</li>
+        <li>Exploring <span class="primary-gradient-text">rendering</span> and practical 3D representations for dynamic, real-world scenes.</li>
+      </ul>
+    </div>
+
+    <p>Feel free to reach out if you would like to discuss research, graphics, reconstruction, or potential collaboration.</p>
+
+    <div class="highlight-blocks">
+      <div class="highlight-block floating-card">
+        <h3><i class="fa-solid fa-cubes"></i> Research Focus</h3>
+        <ul>
+          <li>3D Reconstruction</li>
+          <li>Streaming / Online Reconstruction</li>
+          <li>Rendering & Computer Graphics</li>
+          <li>3D Vision</li>
+        </ul>
       </div>
-      <div class="hero-copy">
-        <p class="eyebrow">Academic Homepage</p>
-        <h1>Yukun Huang <span class="nickname">(Charli)</span></h1>
-        <p class="role">PhD Student at HKUST(GZ)</p>
-        <p class="bio">I am a PhD student at The Hong Kong University of Science and Technology (Guangzhou). My interests lie at the intersection of computer graphics and 3D vision, with a focus on building practical 3D representations that can reconstruct, render, and update scenes efficiently. I am particularly interested in 3D reconstruction, neural rendering, and streaming / online reconstruction.</p>
-        <div class="links">
-          <a class="button primary" href="mailto:charliH26@hotmail.com">Email</a>
-          <a class="button" href="https://github.com/huangyukun26" target="_blank" rel="noreferrer">GitHub</a>
-        </div>
+      <div class="highlight-block floating-card">
+        <h3><i class="fa-solid fa-code"></i> Selected Projects</h3>
+        <p>Interactive systems and graphics experiments, including a full-stack social network platform.</p>
+        <a class="btn-accent" href="projects.html">View Projects</a>
       </div>
-    </section>
-
-    <section id="news" class="section">
-      <div class="section-head"><span>01</span><h2>News</h2></div>
-      <div class="timeline">
-        <div class="timeline-item"><time>Aug. 26, 2026</time><p>Started my PhD journey at HKUST(GZ).</p></div>
+      <div class="highlight-block floating-card">
+        <h3><i class="fa-solid fa-book-open"></i> Notes</h3>
+        <p>A growing collection of technical notes. The first topic is OpenGL.</p>
+        <a class="btn-accent" href="notes.html">Browse Notes</a>
       </div>
-    </section>
+    </div>
 
-    <section id="research" class="section">
-      <div class="section-head"><span>02</span><h2>Research Interests</h2></div>
-      <div class="chips">
-        <span>3D Reconstruction</span><span>Streaming / Online Reconstruction</span><span>Neural Rendering</span><span>Computer Graphics</span><span>3D Vision</span>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <div class="section-head"><span>03</span><h2>Selected Projects</h2></div>
-      <article class="project-card featured">
-        <div class="project-visual social-visual" aria-hidden="true">
-          <div class="mock-window">
-            <div class="mock-bar"><i></i><i></i><i></i></div>
-            <div class="mock-body">
-              <div class="mock-side"></div>
-              <div class="mock-feed"><b></b><b></b><b></b></div>
-              <div class="mock-chat"></div>
-            </div>
-          </div>
-        </div>
-        <div class="project-copy">
-          <p class="kicker">Full-stack system</p>
-          <h3>Social Network Platform</h3>
-          <p>A modular social networking system with authentication, content interaction, relationship management, real-time messaging, notifications, search, recommendation, and graph-based social analysis.</p>
-          <div class="tags"><span>React</span><span>Node.js</span><span>MongoDB</span><span>Redis</span><span>Neo4j</span><span>Socket.IO</span></div>
-          <div class="links">
-            <a class="button primary" href="social-demo.html">Interactive Demo</a>
-            <a class="button" href="https://github.com/huangyukun26/SocialNetworkPlatformApplicationSystem" target="_blank" rel="noreferrer">Code</a>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <section id="notes" class="section">
-      <div class="section-head"><span>04</span><h2>Notes</h2></div>
-      <div class="note-grid">
-        <a class="note-card" href="notes.html#opengl">
-          <div class="opengl-thumb">
-            <div class="os-title">LearnOpenGL</div>
-            <div class="triangle"></div>
-          </div>
-          <div class="note-copy">
-            <div class="note-meta"><span>Graphics</span><span>OpenGL</span><span>Rendering</span></div>
-            <h3>OpenGL</h3>
-            <p>Personal notes and experiments on modern OpenGL, from the rendering pipeline and shaders to transformations, textures, lighting, and graphics programming.</p>
-            <strong>Explore Notes →</strong>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <section id="awards" class="section">
-      <div class="section-head"><span>05</span><h2>Awards & Competitions</h2></div>
-      <div class="list-card"><div><strong>2026</strong></div><div><h3>1st Place (Leaderboard), Fish Species Recognition Challenge</h3><p>Team: CityVisionLab · Codabench / CV4Ecology challenge.</p></div></div>
-    </section>
-
-    <section id="education" class="section">
-      <div class="section-head"><span>06</span><h2>Education</h2></div>
-      <div class="edu-grid">
-        <article class="edu-card"><p class="kicker">2026 — Present</p><h3>The Hong Kong University of Science and Technology (Guangzhou)</h3><p>PhD Student</p><p class="muted">Advisor: Maosu Li</p></article>
-        <article class="edu-card"><p class="kicker">Bachelor's</p><h3>Beijing Forestry University</h3><p>B.Eng. in Computer Science and Technology</p><p class="muted">Undergraduate advisor: Shaorong Wang</p></article>
-      </div>
-    </section>
+    <span class="anchor" id="news"></span>
+    <h1>🔥 News</h1>
+    <ul class="news-list">
+      <li><em>2026.08.26</em>: Started my PhD journey at <span class="accent-text">HKUST(GZ)</span>.</li>
+      <li><em>2026</em>: Team <span class="accent-text">CityVisionLab</span> ranked 1st on the Fish Species Recognition Challenge leaderboard.</li>
+    </ul>
   </main>
+</div>
 
-  <footer><div class="wrap">© 2026 Yukun Huang · Built as a lightweight academic homepage.</div></footer>
-  <script src="script.js"></script>
+<footer class="site-footer">© 2026 Yukun Huang · Adapted from AcadHomepage / Academic Homepage Plus.</footer>
 </body>
 </html>
