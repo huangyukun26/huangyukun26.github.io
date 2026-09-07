@@ -1,0 +1,54 @@
+name: Restore original GIF assets
+
+on:
+  push:
+    branches:
+      - gif-binary-upload
+    paths:
+      - '.gif_source/READY'
+
+permissions:
+  contents: write
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: gif-binary-upload
+          fetch-depth: 0
+
+      - name: Reconstruct original GIF files byte-for-byte
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .gif_source/news.part* > /tmp/news.b85
+          cat .gif_source/notes.part* > /tmp/notes.b85
+          python - <<'PY'
+          import base64, pathlib, hashlib
+          jobs = [
+              ('/tmp/news.b85', 'assets/images/news.gif', '60ffa68d7e9d83cd1701875119c42b170e0029a7ae1a7425f799c21419dad1b8'),
+              ('/tmp/notes.b85', 'assets/images/notes.gif', '4787cea51a5b3e38ebd48c9c8c2e09cb6fa193a7db6d4d3a6f2e345afc2caf8b'),
+          ]
+          for src, dst, expected in jobs:
+              encoded = pathlib.Path(src).read_text().strip()
+              data = base64.b85decode(encoded.encode('ascii'))
+              got = hashlib.sha256(data).hexdigest()
+              if got != expected:
+                  raise SystemExit(f'hash mismatch for {dst}: {got} != {expected}')
+              pathlib.Path(dst).write_bytes(data)
+              print(dst, len(data), got)
+          PY
+          test "$(stat -c%s assets/images/news.gif)" = "727353"
+          test "$(stat -c%s assets/images/notes.gif)" = "997445"
+
+      - name: Commit restored binaries
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/images/news.gif assets/images/notes.gif
+          git commit -m "Restore original transparent animated GIFs"
+          git push origin HEAD:gif-binary-upload
