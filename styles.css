@@ -14,3 +14,10 @@
 .timeline-note{margin-top:3px;color:#666;font-size:13px;line-height:1.45}
 .placeholder-experience .timeline-title{color:#6f7785;font-weight:600}
 @media(max-width:850px){.experience-education-grid{grid-template-columns:1fr;gap:28px}.timeline-logo{width:52px;height:52px;flex-basis:52px}.timeline-title{font-size:16px}}
+
+.project-card{grid-template-columns:280px minmax(0,1fr);gap:30px;padding:20px 22px}
+.project-preview{overflow:hidden;border-radius:8px}
+.project-preview-image{display:block;width:100%;height:auto!important;aspect-ratio:auto!important;object-fit:initial!important;border:1px solid #e2e8f0;border-radius:8px;background:#fff}
+.project-card .paper-box-text h3{margin-bottom:10px}
+.project-card .paper-box-text p{margin:0 0 12px;line-height:1.65}
+@media(max-width:850px){.project-card{grid-template-columns:1fr}.project-preview{max-width:460px}.project-preview-image{width:100%;height:auto!important}}
